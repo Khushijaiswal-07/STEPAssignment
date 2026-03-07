@@ -1,26 +1,37 @@
 import java.util.Scanner;
 
 class Level2_1 {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter first number: ");
-        double number1 = sc.nextDouble();
+        // Create Scanner object to take input
+        Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter second number: ");
-        double number2 = sc.nextDouble();
+        // Ask user to enter a number
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
 
-        double addition = number1 + number2;
-        double subtraction = number1 - number2;
-        double multiplication = number1 * number2;
-        double division = number1 / number2;
+        // Check if the number is a natural number
+        if (number > 0) {
 
-        System.out.println(
-            "The addition, subtraction, multiplication, and division value of 2 numbers "
-            + number1 + " and " + number2 + " is "
-            + addition + ", " + subtraction + ", " + multiplication + ", and " + division
-        );
+            // Loop from 1 to the given number
+            for (int i = 1; i <= number; i++) {
 
-        sc.close();
+                // Check if number is even
+                if (i % 2 == 0) {
+                    System.out.println(i + " is Even");
+                }
+                // Otherwise it is odd
+                else {
+                    System.out.println(i + " is Odd");
+                }
+            }
+
+        } else {
+            System.out.println("The number is not a natural number");
+        }
+
+        // Close scanner
+        input.close();
     }
 }
