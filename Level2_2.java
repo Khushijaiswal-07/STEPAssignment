@@ -1,24 +1,34 @@
 import java.util.Scanner;
 
 class Level2_2 {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter base in cm: ");
-        double base = sc.nextDouble();
+        // Create Scanner Object
+        Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter height in cm: ");
-        double height = sc.nextDouble();
+        // Get user input
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
 
-        double areaSqCm = 0.5 * base * height;
+        int sum = 0;
 
-        double areaSqIn = areaSqCm / (2.54 * 2.54);
+        // Check if number is natural
+        if (number > 0) {
 
-        System.out.println(
-            "The Area of the triangle in sq in is " + areaSqIn +
-            " and sq cm is " + areaSqCm
-        );
+            // Loop from 1 to number
+            for (int i = 1; i <= number; i++) {
+                sum = sum + i;
+            }
 
-        sc.close();
+            // Print result
+            System.out.println("Sum of numbers from 1 to " + number + " is " + sum);
+
+        } else {
+            System.out.println("The number is not a natural number");
+        }
+
+        // Close Scanner
+        input.close();
     }
 }
