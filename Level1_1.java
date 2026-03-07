@@ -1,8 +1,16 @@
-public class Level1_1 {
+import java.util.Scanner;
+
+class Level1_1 {
     public static void main(String[] args) {
-        int birthYear = 2000;
-        int currentYear = 2024;
-        int age = currentYear - birthYear;
-        System.out.println("Harry's age in 2024 is " + age);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int number = sc.nextInt();
+
+        boolean isDivisible = (number % 5 == 0);
+
+        System.out.println("Is the number " + number + " divisible by 5? " + isDivisible);
+
+        sc.close();
     }
 }
