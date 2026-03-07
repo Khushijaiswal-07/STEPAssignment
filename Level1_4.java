@@ -1,14 +1,20 @@
+import java.util.Scanner;
+
 class Level1_4 {
     public static void main(String[] args) {
-        int costPrice = 129;
-        int sellingPrice = 191;
+        Scanner sc = new Scanner(System.in);
 
-        int profit = sellingPrice - costPrice;
-        double profitPercentage = (profit * 100.0) / costPrice;
+        System.out.print("Enter number: ");
+        int number = sc.nextInt();
 
-        System.out.println(
-            "The Cost Price is INR " + costPrice + " and Selling Price is INR " + sellingPrice +
-            "\nThe Profit is INR " + profit + " and the Profit Percentage is " + profitPercentage
-        );
+        if (number > 0) {
+            int sum = number * (number + 1) / 2;
+
+            System.out.println("The sum of " + number + " natural numbers is " + sum);
+        } else {
+            System.out.println("The number " + number + " is not a natural number");
+        }
+
+        sc.close();
     }
 }
