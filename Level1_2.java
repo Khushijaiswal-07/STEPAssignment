@@ -1,11 +1,22 @@
+import java.util.Scanner;
+
 class Level1_2 {
     public static void main(String[] args) {
-        int maths = 94;
-        int physics = 95;
-        int chemistry = 96;
+        Scanner sc = new Scanner(System.in);
 
-        double average = (maths + physics + chemistry) / 3.0;
+        System.out.print("Enter first number: ");
+        int number1 = sc.nextInt();
 
-        System.out.println("Sam’s average mark in PCM is " + average);
+        System.out.print("Enter second number: ");
+        int number2 = sc.nextInt();
+
+        System.out.print("Enter third number: ");
+        int number3 = sc.nextInt();
+
+        boolean isSmallest = (number1 < number2 && number1 < number3);
+
+        System.out.println("Is the first number the smallest? " + isSmallest);
+
+        sc.close();
     }
 }
