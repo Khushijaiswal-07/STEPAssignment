@@ -2,14 +2,18 @@ import java.util.Scanner;
 
 class Level3_2 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter temperature in Fahrenheit: ");
-        double fahrenheit = sc.nextDouble();
+        System.out.print("Enter year: ");
+        int year = sc.nextInt();
 
-        double celsiusResult = (fahrenheit - 32) * 5 / 9;
-
-        System.out.println("The " + fahrenheit + " fahrenheit is " + celsiusResult + " celsius");
+        if (year >= 1582 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
+            System.out.println(year + " is a Leap Year");
+        }
+        else {
+            System.out.println(year + " is not a Leap Year");
+        }
 
         sc.close();
     }
