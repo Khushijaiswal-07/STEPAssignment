@@ -1,19 +1,31 @@
 import java.util.Scanner;
 
 class Level2_3 {
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter the perimeter of the square: ");
-        double perimeter = sc.nextDouble();
+        // Create Scanner Object
+        Scanner input = new Scanner(System.in);
 
-        double side = perimeter / 4;
+        // Get user input
+        System.out.print("Enter a number: ");
+        int number = input.nextInt();
 
-        System.out.println(
-            "The length of the side is " + side +
-            " whose perimeter is " + perimeter
-        );
+        // Check if number is natural
+        if (number > 0) {
 
-        sc.close();
+            // Loop from 1 to 10
+            for (int i = 1; i <= 10; i++) {
+
+                // Print multiplication result
+                System.out.println(number + " x " + i + " = " + (number * i));
+            }
+
+        } else {
+            System.out.println("The number is not a natural number");
+        }
+
+        // Close Scanner
+        input.close();
     }
 }
